@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>滑动导航</title>
+	<style>
+	    html,body {
+		    margin:0;
+			padding:0;
+			height:100%;
+		}
+		
+		#wrapper {
+		    width:100%;
+			height:100%;
+			overflow:hidden;
+			position:relative;
+		}
+		
+		#side-nav {
+		    width:300px;
+			height:100%;
+			background:#444;
+			position:absolute;
+			top:0;
+			-webkit-transform: translateX(-300px);
+			transform:translateX(-300px);
+			-webkit-transition: .5s ease all;
+			transition: .5s ease all;
+		}
+		
+		#main {
+		    width:100%;
+			padding:50px;
+			box-sizing:border-box;
+			-webkit-transition: .5s ease all;
+			transition: .5s ease all;
+		}
+		
+		#main.off-display {
+		    -webkit-transform:translateX(300px);
+			transform:translateX(300px);
+		}
+		
+		#side-nav.off-display {
+		    -webkit-transform:translateX(0px);
+			transform:translateX(0px);
+		}
+	</style>
+</head>
+<body>
+    <div id="wrapper">
+	    <div id="main">
+		    <div id="main-nav">
+			    <a href="" id="off-canvas-menu">Menu</a>
+			</div>
+			<div id="content">
+			    <h1>Off-canvas menu</h1>
+				<p>
+				    Off-canvas menus are positioned outside of the viewport and slide in when activated.
+					Setting up an off-canvas layout in HTML5 is super easy.
+				</p>
+			</div>
+		</div>
+		<div id="side-nav">
+		    <a href="" id="close-slide-nav">Close</a>
+		    <ul>
+			    <li>Home</li>
+				<li>Events</li>
+				<li>Store</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function(){
+		    $('#off-canvas-menu,#close-slide-nav').click(function(event)){
+			    event.preventDefault();
+				$('#main,#side-nav').toggleClass('off-display');
+			});
+		});
+	</script>
+</body>
+</html>

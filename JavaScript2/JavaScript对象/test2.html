@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>日期</title>
+</head>
+<body>
+    <p id="demo">点击按钮获取今年的年份</p>
+	<button onclick="myFunction()">点我</button>
+    <script>
+	    function myFunction(){
+		    var c = new Date();
+		    var x = document.getElementById("demo").innerHTML=c.getFullYear();
+		}
+	    var d = new Date();
+		document.write(d);
+		
+		var z = new Date();
+		x.setFullYear(2100,0,14);
+		var today = new Date();
+		if(z>today){
+		    alert("今天是2100年1月14日之前");
+		}else{
+		    alert("今天是2100年1月14日之后");
+		}
+	</script>
+</html>

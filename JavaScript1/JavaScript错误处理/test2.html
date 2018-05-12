@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>带有确认框的try...catch语句</title>
+	<script>
+	    var txt="";
+	    function message(){
+		    try{
+			    adddlert("Welcome!");
+			}catch(err){
+			    txt="本页有一个错误.\n\n";
+			    txt+="单击确定继续跳转\n";
+			    txt+="或者单击取消返回";
+			    if(confirm(txt)){
+			        document.location.href="//www.runood.com";
+		 	}
+			}
+		    
+		}
+	</script>
+</head>
+<body>
+    <button onclick="message()">查看消息</button>
+</body>
+</html>

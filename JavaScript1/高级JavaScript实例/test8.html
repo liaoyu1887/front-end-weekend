@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>创建用于对象的模板</title>
+</head>
+<body>
+    <script>
+	    function person(firstname,lastname,age,eyecolor){
+		   this.firstname=firstname;
+		   this.lastname=lastname;
+		   this.age=age;
+		   this.eyecolor=eyecolor;
+		}
+		father = new person("liaoxianglong","xianglong",46,"black");
+		document.write(father.firstname+"is"+father.age+"years old.");
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>另一个简单计时</title>
+	<script>
+	    function myFunction(){
+		    var x = document.getElementById("txt");
+			var t1=setTimeout(function(){x.value="2秒"},2000);
+			var t2=setTimeout(function(){x.value="4秒"},4000);
+			var t3=setTimeout(function(){x.value="6秒"},6000);
+		}
+	</script>
+</head>
+<body>
+    <form>
+	    <input type="button" onclick="myFunction()" value="显示文本时间">
+		<input type="text" id="txt">
+	</form>
+	<p>点击上面的按钮，输出的文本将告诉你2秒，4秒，6秒已经过去了。</p>
+</body>
+</html>
